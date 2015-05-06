@@ -1,4 +1,3 @@
-
 var xmlhttp = new XMLHttpRequest();
 var meta = parent.document.getElementsByTagName('meta');
 
