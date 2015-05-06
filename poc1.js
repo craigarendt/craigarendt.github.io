@@ -1,5 +1,7 @@
 
+var xmlhttp = new XMLHttpRequest();
 var meta = parent.document.getElementsByTagName('meta');
+
 for (i=0; i<meta.length; i++) {
   if (meta[i].getAttribute("name") == "csrf-token") {
     var csrfToken = meta[i].getAttribute("content");
