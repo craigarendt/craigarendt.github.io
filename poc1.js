@@ -6,7 +6,7 @@ for (i=0; i<meta.length; i++) {
   if (meta[i].getAttribute("name") == "csrf-token") {
     var csrfToken = meta[i].getAttribute("content");
 
-    //update this users account to role_id 1
+    //update this users account to role_id 3 (Admin)
     xmlhttp.open("POST",account,true);
     //send the csrf token in a request header
     xmlhttp.setRequestHeader("X-CSRF-Token", csrfToken);
