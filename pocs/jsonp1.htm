@@ -1,19 +1,29 @@
 <html>
     <head>
     </head>
-    <title>Users History</title>
+    <title>User History</title>
     <body>
-    <h1>Users History</h1>
-        <script>
+       
+        <script> 
+           
+        function myUser(jsonp){
+            var text = '<h1>History for ' + jsonp.results.userData.email + ' Retrieved Without an Access Key</h1>';
+            text += '<img src=' + jsonp.results.userData.picURL + '><br>';
+			console.log(jsonp.results);
+			document.write(text);
+        }    
+        
         function myCallBack(jsonp){
-            var text = '';
-			      console.log(jsonp);
-			      for (i=0; i < jsonp.articles.length; i++) {
-			        text += 'Title: ' + jsonp.articles[i].title + '<p>URL: ' + jsonp.articles[i].url + '<br>Read date:' + jsonp.articles[i].read_date + '</p>';
-		        }
+			var text = '';
+			for (i=0; i < jsonp.articles.length; i++) {
+			  text += 'Title: ' + jsonp.articles[i].title + '<p>URL: ' + jsonp.articles[i].url + '<br>Read date:' + jsonp.articles[i].read_date + '</p>';
+		    }
             document.write(text);
         }
         </script>
+        <script type="text/javascript" src="https://www.nytimes.com/svc/community/V3/requestHandler?callback=myUser&cmd=GetCommentSummary&method=get"></script>
         <script type="text/javascript" src="https://www.nytimes.com/svc/recommendations/v3/userhist.jsonp?access_key[0]=&callback=myCallBack"></script>
+        
+        
     </body>
 </html>
