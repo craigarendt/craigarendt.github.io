@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <title>Users History</title>
+    <body>
+    <h1>Users History</h1>
+        <script>
+        function myCallBack(jsonp){
+            var text = '';
+			      console.log(jsonp);
+			      for (i=0; i < jsonp.articles.length; i++) {
+			        text += 'Title: ' + jsonp.articles[i].title + '<p>URL: ' + jsonp.articles[i].url + '<br>Read date:' + jsonp.articles[i].read_date + '</p>';
+		        }
+            document.write(text);
+        }
+        </script>
+        <script type="text/javascript" src="https://www.nytimes.com/svc/recommendations/v3/userhist.jsonp?access_key[0]=&callback=myCallBack"></script>
+    </body>
+</html>
