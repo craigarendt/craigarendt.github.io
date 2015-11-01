@@ -1,0 +1,32 @@
+<html>
+    <title>User History</title>
+    <body>
+       
+        <script> 
+           
+        function myUser(jsonp){
+            var text = '<h1>User info  for ' + jsonp.results.userData.email + '(' + jsonp.results.userData.userID + ')</h1>';
+            text += '<img src=' + jsonp.results.userData.picURL + '><br>';
+			console.log(jsonp.results);
+			document.write(text);
+        }    
+        
+        function userInfo(jsonp){
+			var text = '';
+			console.log(jsonp);
+			text += 'ID: ' + jsonp.data.id + '<br>';
+			text += 'Name: ' + jsonp.data.name + '<br>';
+			text += 'Gender: ' + jsonp.data.gender + '<br>';
+			text += 'Income Low: ' + jsonp.data.income_low + '<br>';
+			text += 'Income High: ' + jsonp.data.income_high + '<br>';
+			text += 'Job Industry: ' + jsonp.data.jobindustry + '<br>';
+			text += 'Job Title: ' + jsonp.data.jobtitle + '<br>';
+            document.write(text);
+        }
+        </script>
+        <script type="text/javascript" src="https://www.nytimes.com/svc/community/V3/requestHandler?callback=myUser&cmd=GetCommentSummary&method=get"></script>
+        <script type="text/javascript" src="https://www.nytimes.com/svc/web-products/userinfo-v2.jsonp?callback=userInfo"></script>
+        
+        
+    </body>
+</html>
