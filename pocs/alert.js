@@ -1,1 +1,1 @@
-<svg/onload=alert(123)>
+alert(123);
