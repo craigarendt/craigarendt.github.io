@@ -1,1 +1,1 @@
-alert('XSS');
+prompt('XSS',document.domain);
