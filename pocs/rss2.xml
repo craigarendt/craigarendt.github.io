@@ -6,7 +6,7 @@
 <channel>
  <title>&xxe;</title>
  <description>&xxe;</description>
- <link>http://www.example.com/main.html</link>
+ <link>javascript:alert(1)</link>
  <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
  <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
  <ttl>1800</ttl>
@@ -14,7 +14,7 @@
  <item>
   <title>&xxe;</title>
   <description>&xxe;</description>
-  <link>http://www.example.com/blog/post/1</link>
+  <link>javascript:alert(1)</link>
   <guid isPermaLink="true">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
   <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
  </item>
