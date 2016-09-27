@@ -1,2 +1,6 @@
 <!DOCTYPE html>
-<script>window.location = "javascript:alert(1)";</script>
+<script>
+  if(top != window) {
+  top.location = javascript:alert(1)
+}
+</script>
